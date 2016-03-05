@@ -10,6 +10,12 @@ bug.
 
 Download the paper [here](./build/Micro Manual.pdf)
 
+### Building
+
+    `pdflatex main.tex`
+
+Or use https://www.sharelatex.com/
+
 ### Known issues
 
 1. Fix final code formatting
