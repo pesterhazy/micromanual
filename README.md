@@ -12,7 +12,7 @@ Download the paper [here](./build/Micro Manual.pdf)
 
 ### Building
 
-    `pdflatex main.tex`
+    pdflatex main.tex
 
 Or use https://www.sharelatex.com/
 
@@ -20,3 +20,7 @@ Or use https://www.sharelatex.com/
 
 1. Fix final code formatting
 2. Spacing around \dots is not consistent
+
+### LICENSE
+
+I don't own any of this work and hope to not get sued ;)
