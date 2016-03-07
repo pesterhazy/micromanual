@@ -1,6 +1,7 @@
 \documentclass[10pt,a4paper,twocolumn]{article}
 \usepackage[utf8]{inputenc}
 \usepackage{fancyvrb}
+\usepackage{changes} % For \textsubscript
 
 \title{A Micro-Manual for LISP - Not the whole truth}
 \author{John McCarthy\\
@@ -10,23 +11,23 @@
 \date{}
 
 \newcommand{\args}[1] {#1\textsubscript{i} \dots \ #1\textsubscript{n}}
-\newcommand{\ei}[0] {e\textsubscript{i} \ }
-\newcommand{\en}[0] {e\textsubscript{n} \ }
+\newcommand{\ei}[0] {e\textsubscript{i}}
+\newcommand{\en}[0] {e\textsubscript{n}}
 
 \begin{document}
 \maketitle
 
 % \section{Introduction}
 
-LISP data are symbolic expressions that can be either atoms or lists. Atoms are
+LISP data are symbolic expressions that can be either \textit{atoms} or \textit{lists}. \textit{Atoms} are
 strings of letters and digits and other characters not otherwise used in LISP. A
 list consists of a left parenthesis followed by zero or more atoms or lists
 separated by spaces and ending with a right parenthesis. Examples: \texttt{A},
-\texttt{ONION}, \texttt{0}, \texttt{(A)}, \texttt{(A ONION A)}, \texttt{(PLUS B
-  (TIMES X PI) i)}, \texttt{(CAR (QUOTE CAB)))}.
+\texttt{ONION}, \texttt{()}, \texttt{(A)}, \texttt{(A ONION A)}, \texttt{(PLUS 3
+  (TIMES X PI) 1)}, \texttt{(CAR (QUOTE (A B)))}.
 
 The LISP programming language is defined by rules whereby certain LISP
-expressions have other LISP expressions as values. The function called value
+expressions have other LISP expressions as \textit{values}. The function called \textit{value}
 that we will use in giving these rules is not part of the LISP language but
 rather part of the informal mathematical language used to define LISP. Likewise,
 the italic letters \textit{e} and \textit{a} (sometimes with subscripts) denote
@@ -56,11 +57,11 @@ serving as a function name.
   \textit{value e2}. Otherwise, its \textit{value} is \texttt{NIL}. Thus
   \textit{value} \texttt{(EQUAL (CAR (QUOTE (A B))) (QUOTE A))} = \texttt{T}.
 
-\item \textit{value} (ATOM e) = \texttt{T} if \textit{value e} is an atom;
+\item \textit{value} \texttt{(ATOM e)} = \texttt{T} if \textit{value e} is an atom;
   otherwise its \textit{value} is \texttt{NIL}.
 
 \item \textit{value} \texttt{(COND(p\textsubscript{i} \ei) \dots
-    \texttt{\char32} (p\textsubscript{n} \en))} = \textit{value}
+    (p\textsubscript{n} \en))} = \textit{value}
   \texttt{\ei}, where \texttt{p\textsubscript{i}} is the the
   first of the \textit{p}\rq s whose \textit{value} is not \texttt{NIL}. Thus
   \textit{value} \texttt{(COND ((ATOM (QUOTE A)) (QUOTE B)) ((QUOTE T) (QUOTE
@@ -78,7 +79,7 @@ serving as a function name.
     (\args{v}) e)) \args{e})} is the same as \textit{value} \texttt{((LAMBDA
     (\args{v}) e) \args{e})} with the additional rule that whenever
   \texttt{(\textit{f} \args{a})} must be evaluated, \textit{f} is replaced by
-  \texttt{(LABEL f (LAMBDA (\args{v}) e))}. Lists beginning with \texttt{LABEL}
+  \texttt{(LABEL \textit{f} (LAMBDA (\args{v}) e))}. Lists beginning with \texttt{LABEL}
   define functions recursively.
 
 \end{enumerate}
