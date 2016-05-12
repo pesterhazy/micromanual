@@ -1,12 +1,17 @@
-\documentclass[10pt,a4paper,twocolumn]{article}
+\documentclass[8pt,letter,twocolumn]{article}
+\usepackage[margin=0.6in]{geometry}
 \usepackage[utf8]{inputenc}
 \usepackage{fancyvrb}
 \usepackage{changes} % For \textsubscript
 
-\title{A Micro-Manual for LISP - Not the whole truth}
-\author{John McCarthy\\
-  Artificial Intelligence Laboratory\\
-  Stanford University}
+\usepackage[protrusion=true,expansion=true,activate={true,nocompatibility},final,factor=1200,stretch=35,shrink=35]{microtype}
+\doublehyphendemerits=10000
+
+\title{\small \textbf{\textsc{{A Micro-Manual for LISP - Not the whole truth}}}}
+
+\author{\footnotesize \bfseries John McCarthy\\
+            \footnotesize \bfseries Artificial Intelligence Laboratory\\
+            \footnotesize \bfseries Stanford University}
 
 \date{}
 
@@ -15,6 +20,7 @@
 \newcommand{\en}[0] {e\textsubscript{n}}
 
 \begin{document}
+\setcounter{page}{215}
 \maketitle
 
 % \section{Introduction}
@@ -37,7 +43,7 @@ denotes an atom serving as a variable, and the letter \textit{f} stands for a
 LISP expression serving as a function name.
 
 \begin{enumerate}
-
+\setlength\itemsep{0em}
 \item \textit{value} \texttt{(QUOTE \textit{e})} = \textit{e}. Thus the value of
   \texttt{(QUOTE A)} is \texttt{A}.
 
@@ -106,6 +112,7 @@ Difficult mathematical type exercise: Find a list \textit{e} such that
 The above LISP needs some abbreviations for practical use.
 
 \begin{enumerate}
+\setlength\itemsep{0em}
 
 \item The variables \texttt{T} and \texttt{NIL} are permanently assigned the
   values \texttt{T} and \texttt{NIL}, and \texttt{NIL} is the name of the null
@@ -185,6 +192,7 @@ lists of expressions, \texttt{EVCOND} which evaluates conditional expressions,
 environment, and \texttt{PAIRUP} which pairs up the corresponding elements of
 two lists.
 
+\newpage
 Here is \texttt{EVAL}.
 
 \VerbatimInput[fontfamily=tt, fontsize=\scriptsize, samepage=true]{eval.lisp}
