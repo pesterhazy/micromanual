@@ -8,18 +8,13 @@ poorly typeset PDF and text cannot be copied. This aims to be a verbatim copy of
 the original, character by character. Any deviation unless explicitly noted is a
 bug.
 
-Download the paper [here](./build/Micro Manual.pdf)
+Download the paper [here](./Micro Manual.pdf)
 
 ### Building
 
-    pdflatex main.tex
+    make
 
 Or use https://www.sharelatex.com/
-
-### Known issues
-
-1. Fix final code formatting
-2. Spacing around \dots is not consistent
 
 ### LICENSE
 
