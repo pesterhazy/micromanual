@@ -121,10 +121,10 @@ The above LISP needs some abbreviations for practical use.
 \item So as not to describe a LISP function each time it is used, we define it
   permanently by typing \texttt{(DEFUN f (\args{v}))) e)} . Thereafter
   \texttt{(f \args{e})} is evaluated by evaluating \textit{e} with the variables
-  \args{v} taking the values value \textit{value} \ei \dots \ \textit{value} \en
+  \args{v} taking the values value \textit{value} \ei, \dots, \textit{value} \en
   respectively. Thus, after we define \texttt{(DEFUN FF (X) (COND ((ATOM X) X)
-    (T (FF (CAR X)))))} , typing \texttt{(FF (QUOTE (CA B) C)))}, gets
-  \texttt{A} from LISP.
+    (T (FF (CAR X)))))}, typing \texttt{(FF (QUOTE (CA B) C)))}, gets \texttt{A}
+  from LISP.
 
 \item We have the permanent function definitions.
 
