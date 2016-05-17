@@ -1,6 +1,6 @@
 # A Micro-Manual for LISP - Not the whole truth
 
-A neatly typeset version of John McCathy's classic paper "A Micro-Manual for
+A neatly typeset version of John McCarthy's classic paper "A Micro-Manual for
 LISP - Not the whole truth".
 
 The [original](https://cse.sc.edu/~mgv/csce330f15/micromanualLISP.pdf) is a very
