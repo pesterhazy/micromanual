@@ -1,4 +1,4 @@
-Micro\ Manual.pdf: Micro\ Manual.tex
+Micro\ Manual.pdf: Micro\ Manual.tex eval.lisp
 	pdflatex 'Micro Manual.tex'
 
 .PHONY: clean
