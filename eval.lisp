@@ -34,8 +34,6 @@
             (cons (eval (cadr e) a) (eval (caddr e) a)))
             ((eq (car e) (quote eq))
             (eq (eval (cadr e) a) (eval (caddr e) a)))
-            ((eq (car e) (quote eq))
-            (eq (eval (cadr e) a) (eval (caddr e) a)))
             ((eq (car e) (quote cond))
             ((label evcond
                 (lambda (u a)
