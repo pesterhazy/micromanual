@@ -51,7 +51,7 @@
                     (cdr e))
                  a))))
 
-         ((eq (caar e) (quote lambda)) ;; <- Extra ) here
+         ((eq (caar e) (quote lambda))
          (eval (caddar e)
             ((label ffappend
                  (lambda (u v)
