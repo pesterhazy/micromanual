@@ -151,7 +151,7 @@ defines a function that gives alternate elements of a list starting with the
 first element. Thus \texttt{(alt (quote (a b c d e)))} = \texttt{(a c e)}
 
 \texttt{(defun subst (x y z) (cond ((atom z) (cond ((equal z y) x) (t z))) (t
-  (cons (subst x y (car z))(subst x y ( c d r z))))))},
+  (cons (subst x y (car z))(subst x y (cdr z))))))},
 
 where Y is an atom, gives the result of substituting X for Y in Z. Thus
 \texttt{(subst (quote (plus x y)) (quote v) (quote (times x v)))} =
